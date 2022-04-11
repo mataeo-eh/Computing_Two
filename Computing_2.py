@@ -1,3 +1,11 @@
+        from __future__ import division
+        import math
+        
+        kA1 = input("enter ka1 value: ")
+
+
+        ka1 = float(kA1)
+        
         OHNegative = input("enter OH- [OH] value : ")
         LOh = input("Enter L of OH-: ")
         LHA = input("Enter L of H3A: ")
@@ -37,3 +45,17 @@
 
         # y-aa
         Y2 = ka1
+
+        if Y2 == 0:
+            AB2 = 0
+        else:
+            AB2 = (math.log10(Y2) * -1)
+
+
+
+
+        if Y2 == 0:
+            AB7 = 0
+        else:
+            AB7 = 0.000000000000001 / Y2
+            
