@@ -1,35 +1,41 @@
 from __future__ import division
 import math
 
+
+#below is where the UI starts with input prompts and python if/else logic to denote which part of the calculator a user wishes to use.
+
 type = input("please tell me which type you want: dissociation =1, titration =2 : ")
 
 if type == "2":
-    #input
+    # first inputs for titrations 
     monoprotic = "1"
     diprotic = "2"
     triprotic = "3"
     case1 = input("Please type one of the following: monoprotic =1, diprotic =2, triprotic =3 :")
-
+# where the math for a monoprotic titration begins.
     if case1 == "1":
         kA1 = input("enter ka1 value: ")
 
-
+# just in case your Ka is a fraction for whatever reason
         ka1 = float(kA1)
 
-
+# [OH] is the concentration of whatever base you are using
+#lOH is the volume (in Liters) of said base
+#[HA] is the concentration of the acid being titrated and LHA is the volume, again in Liters, of the acid
         OHNegative = input("enter OH- [OH] value : ")
         LOh = input("Enter Liters of OH-: ")
         LHA = input("Enter Liters of HA: ")
         HA = input("Enter [HA] value: ")
 
-
+#floating any fractions that may be used for concentration of volume (also useful if you have volume and moles but no calculator. you can find the concentration by simply telling the claculatro that the concentration is moles/liters)
         OHnegative = float(OHNegative)
         LOH = float(LOh)
         LHA = float(LHA)
         HA = float(HA)
 
 
-        # H3A
+        # HA
+        #beginning of the math for solving monoprotic titrations
         AL3 = LHA * HA
         AJ3 = OHnegative * LOH
         AJ4 = AJ3 / (LOH + LHA)
@@ -41,7 +47,6 @@ if type == "2":
         AM5 = AM4 / (LOH + LHA)
         AF2 = AJ4
 
-        # ae block
         AE6 = ka1 * AM5
         AE8 = 1
         AE10 = (-1) * AE6
@@ -54,10 +59,9 @@ if type == "2":
 
         AE3 = AM5 - AE16
 
-        # y-aa
         Y2 = ka1
 
-
+#logic for conditions when there is excess base
 
         if Y2 == 0:
             AB2 = 0
@@ -66,7 +70,7 @@ if type == "2":
 
 
 
-
+#logic for finding pOH and kb's
         if Y2 == 0:
             AB7 = 0
         else:
@@ -74,21 +78,13 @@ if type == "2":
 
 
 
-        # af block
         AF2 = AJ4
         AF3 = AE16
 
         AF9 = AE16
 
-
-
-
-        # AG
-
-        # AG7=X10*AH2
         AG9 = AE16
 
-        # X block
         X9 = AE16 + 0.0000001 + 0
         X14 = X9
 
@@ -97,11 +93,7 @@ if type == "2":
         else:
             X3 = (math.log10(X9) * -1)
         pH = X3
-        # if X10 <= 0:
-        #   X4 = 0
-        # else:
-        #    X4 = (math.log10(X10) * -1)
-
+        
         X18 = AE16 + 0.0000001
         if AE3==0:
             X19=0
@@ -118,14 +110,14 @@ if type == "2":
         else:
             X6 = (math.log10(AJ9) * -1)
 
-        # misc block
+        #logic for what is going to be printed, the values they belong to, and in what order the output is best for
         AF7 = X9 * 0
         Z9 = 14 - X3
         Y9 = (10 ** -Z9)
         Y11 = 10 ** (-X6)
         Z10 = 14 - X5
         Z11 = 14 - X6
-        # X block pt 2
+       
         HHE = X5
         EB = X6
         X7 = (AB2 + 0) / 2
@@ -134,7 +126,7 @@ if type == "2":
         NHHE = 14 - (X5)
         NEB = 14 - (X6)
 
-        # final
+        #the final steps of titration math to follow through to the print
 
         H3AF = AM5-AF3
         pKa1F = AB2
@@ -147,7 +139,7 @@ if type == "2":
             pKa1 = 0
             pKa2 = 0
             pKa3 = 0
-            # HplusH2A=float(HplusH2a)
+           
             if AM4 == 0:
                 ka1=0.00000000000001/ka1
             else:
@@ -180,7 +172,7 @@ if type == "2":
             else:
                 pKa1F = (math.log10(ka1) * -1)
 
-            # part2
+        
 
             I9 = I
 
@@ -199,7 +191,7 @@ if type == "2":
             pH = 14 - pH
             pOH = 14 - (pH)
 
-
+#titration not normal final outputs 
 
             print("[A-] =", H2af)
 
@@ -234,7 +226,7 @@ if type == "2":
     else:
         print = "click me ------> https://www.youtube.com/watch?v=MUuNDb-nm5M"
 
-    # input
+    # same as seen before except for diprotic. everything works essentially the same except there is an extra step for the second kA value
     if case1 == "2":
         kA1 = input("enter ka1 value: ")
         kA2 = input("enter ka2 value: ")
@@ -242,6 +234,8 @@ if type == "2":
 
         ka1 = float(kA1)
         ka2 = float(kA2)
+
+#same as before, liters of base you're using, its concentration, and the volume and concentration of the acid being titrated. it shall remain steady for the entirety of the calculators code
 
         OHNegative = input("enter OH- [OH] value: ")
         LOh = input("Enter Liters of OH-: ")
@@ -255,7 +249,7 @@ if type == "2":
         H3A = float(H3a)
 
 
-        # H3A
+    
         AL3 = LH3a * H3A
         AJ3 = OHnegative * LOH
         AJ4 = AJ3 / (LOH + LH3a)
@@ -267,7 +261,7 @@ if type == "2":
         AM5 = AM4 / (LOH + LH3a)
         AF2 = AJ4
 
-        # ae block
+        
         AE6 = ka1 * AM5
         AE8 = 1
         AE10 = (-1) * AE6
@@ -280,7 +274,7 @@ if type == "2":
 
         AE3 = AM5 - AE16
 
-        # y-aa
+        
         Y2 = ka1
         Z2 = ka2
 
@@ -297,12 +291,10 @@ if type == "2":
 
 
 
-
         if Y2 == 0:
             AB7 = 0
         else:
             AB7 = 0.000000000000001 / Y2
-
 
 
         if Z2 == 0:
@@ -311,8 +303,6 @@ if type == "2":
             AD7 = 0.00000000000001 / Z2
 
 
-
-        # af block
         AF2 = AJ4
         AF3 = AE16
         AF6 = AF3 * Z2
@@ -333,16 +323,12 @@ if type == "2":
             AF16 = 0
             AG2 = 0
 
-        # AG
-
-
-        # AG7=X10*AH2
+     
         AG9 = AE16
         AG17 = AF10 * AF10
 
         AF4 = (AJ4) - AG2
 
-        # X block
         X9 = AE16 + 0.0000001 + AF16
         X14 = X9
 
@@ -351,11 +337,7 @@ if type == "2":
         else:
             X3 = (math.log10(X9) * -1)
         pH = X3
-        # if X10 <= 0:
-        #   X4 = 0
-        # else:
-        #    X4 = (math.log10(X10) * -1)
-
+        
         X18 = AE16 + 0.0000001
         if AE3 == 0:
             X19 = 0
@@ -372,14 +354,15 @@ if type == "2":
         else:
             X6 = (math.log10(AJ9) * -1)
 
-        # misc block
+            #basic steps for a titration, just carried out using variables instead of real numbers, you supply the real numbers my friend
+
         AF7 = X9 * AG2
         Z9 = 14 - X3
         Y9 = (10 ** -Z9)
         Y11 = 10 ** (-X6)
         Z10 = 14 - X5
         Z11 = 14 - X6
-        # X block pt 2
+      
         HHE = X5
         EB = 14-X6
         X7 = (AB2 + AC2) / 2
@@ -388,8 +371,6 @@ if type == "2":
         NHHE = 14 - (X5)
         NEB = 14 - (X6)
 
-        # final
-
         H3AF = AM5-AF3
         pKa1F = AB2
         pKa2F = AC2
@@ -397,13 +378,11 @@ if type == "2":
         H2AF = AE16
         HAneg2F = AF16
         Aneg3F = AG17
-        # new code that takes block one
         if AM4 <= 0:
             H3a = AL3 / ((LOH + LH3a))
             pKa1 = 0
             pKa2 = 0
             pKa3 = 0
-            # HplusH2A=float(HplusH2a)
             if AM4 == 0:
                 ka1 = 0.00000000000001 / ka1
             else:
@@ -439,10 +418,7 @@ if type == "2":
                 pKa2F = 0
             else:
                 pKa2F = (math.log10(ka2) * -1)
-
-
-
-            # part2
+#logic for special conditions (i.e excess base)
             I6 = ((I) * (ka2))
             I9 = I
             I10 = ((ka2) + (I9))
@@ -479,7 +455,7 @@ if type == "2":
 
             PH = 14 - pH
             pOH = 14 - (PH)
-            #outputs
+      
             print("[H2A-] =", H2af)
             print("[HA-2] =", I16)
             print("pH   =", PH)
@@ -492,7 +468,7 @@ if type == "2":
             print("pKB3 =", pKB3)
 
         else:
-            # block 2 diprotic final outputs
+        
             print("pKa1 = ", pKa1F)
             print("pKa2 = ", pKa2F)
 
@@ -534,7 +510,7 @@ if type == "2":
         H3A = float(H3a)
 
 
-        # H3A
+        # if you dont know how it works yet, DONT USE A CALCULATOR TO CHEAT
         AL3 = LH3a * H3A
         AJ3 = OHnegative * LOH
         AJ4 = AJ3 / (LOH + LH3a)
@@ -546,7 +522,6 @@ if type == "2":
         AM5 = AM4 / (LOH + LH3a)
         AF2 = AJ4
 
-        # ae block
         AE6 = ka1 * AM5
         AE8 = 1
         AE10 = (-1) * AE6
@@ -566,7 +541,6 @@ if type == "2":
 
         AE3 = AM5 - AE16
 
-        # y-aa
         Y2 = ka1
         Z2 = ka2
         AA2 = ka3
@@ -603,8 +577,6 @@ if type == "2":
             AD7 = 0.00000000000001 / Z2
 
 
-
-        # af block
         AF2 = AJ4
         AF3 = AE16
         AF6 = AF3 * Z2
@@ -618,17 +590,12 @@ if type == "2":
         AF16 = AF15 / 2
 
         AG2=AF16
-        # AG
-
         AG6 = AG2 * AA2
-        # AG7=X10*AH2
         AG9 = AE16
         AG10 = AA2 + AG9
 
 
         AF4 = (AJ4) - AG2
-
-        # X block
         X9 = AE16 + 0.0000001 + AF16
         X14 = X9
 
@@ -637,11 +604,6 @@ if type == "2":
         else:
             X3 = (math.log10(X9) * -1)
         pH=X3
-        #if X10 <= 0:
-         #   X4 = 0
-        #else:
-        #    X4 = (math.log10(X10) * -1)
-
         X18 = AE16 + 0.0000001
         if AE3 == 0:
             X19 = 0
@@ -659,14 +621,12 @@ if type == "2":
             X6 = (math.log10(AJ9) * -1)
 
 
-        # misc block
         AF7 = X9 * AG2
         Z9 = 14 - X3
         Y9 = (10 ** -Z9)
         Y11 = 10 ** (-X6)
         Z10 = 14 - X5
         Z11 = 14 - X6
-        #X block pt 2
         HHE=X5
         EB=14-X6
         X7=(AB2+AC2)/2
@@ -684,13 +644,11 @@ if type == "2":
         else:
             AG3=AF16
             AG17=0
-        #new code that takes block one
         if AM4 <= 0:
             H3a=AL3/((LOH+LH3a))
             pKa1 = 0
             pKa2 = 0
             pKa3 = 0
-            # HplusH2A=float(HplusH2a)
             if AM4 == 0:
                 ka1 = 0.00000000000001 / ka1
             else:
@@ -731,7 +689,6 @@ if type == "2":
             else:
                 pKa3F = (math.log10(ka3) * -1)
 
-            # part2
             I6 = ((I) * (ka2))
             I9 = I
             I10 = ((ka2) + (I9))
@@ -800,9 +757,6 @@ if type == "2":
             print("pKB3 =", pKB3)
 
         else:
-
-
-
             H3AF = AM5-(AF3)
             pKa1F = AB2
             pKa2F = AC2
@@ -810,8 +764,6 @@ if type == "2":
             H2AF = AE16
             HAneg2F = AG3
             Aneg3F = AG17
-
-            #block 2 triprotic final outputs
             print("pKa1 = ", pKa1F)
             print("pKa2 = ", pKa2F)
             print("pKa1 = ", pKa3F)
@@ -826,9 +778,6 @@ if type == "2":
 
             print("pOH HHE = ", NHHE)
             print("pOH = ", NpH)
-            # initialize sum and counter
-
-
     else:
         if case1 == "diprotic":
             none = 1
@@ -840,25 +789,19 @@ if type == "2":
 else:
     none=3
 if type == "1":
-
-    # input
     monoprotic = "1"
     diprotic = "2"
     triprotic = "3"
 
     case = input("Please type one of the following: monoprotic =1, diprotic =2, triprotic =3:")
-    # mono
+
     if case == "1":
         kA1 = input("Enter ka1 value :")
         H3a = input("Enter [HA] vaule :")
-
-        # converting to int
         ka1 = float(kA1)
         H3A = float(H3a)
-        # pH=float(Ph)
         pKa1 = 0
-        # HplusH2A=float(HplusH2a)
-
+        #more floats just in case you wanna use a fraction.  every place there is a float(i) it is just so python can compute your dang fractions
         A = ((ka1) * (H3A))
         B = 1
         C = 0
@@ -884,7 +827,6 @@ if type == "1":
         else:
             pKa1F = (math.log10(ka1) * -1)
         pKB1 = 14 - pKa1F
-        # part2
         H3=(H3A)-(H2af)
         print("[A-] =", H2af)
         print("[HA] =)", H3)
@@ -895,22 +837,15 @@ if type == "1":
         print("pKB1 =", pKB1)
     else:
         nothinghap = 2
-    # diprotic
     if case == "2":
         kA1 = input("Enter ka1 value :")
         kA2 = input("Enter ka2 vaule :")
         H3a = input("Enter [H2A] vaule :")
-        # Ph=input("Enter PH vaule :")
-
-        # converting to int
         ka1 = float(kA1)
         ka2 = float(kA2)
         H3A = float(H3a)
-        # pH=float(Ph)
         pKa1 = 0
         pKa2 = 0
-        # HplusH2A=float(HplusH2a)
-
         A = ((ka1) * (H3A))
         B = 1
         C = 0
@@ -940,8 +875,6 @@ if type == "1":
             pKa2F = 0
         else:
             pKa2F = (math.log10(ka2) * -1)
-
-        # part2
         I6 = ((I) * (ka2))
         I9 = I
         I10 = ((ka2) + (I9))
@@ -981,31 +914,18 @@ if type == "1":
 
     else:
         nothinghappens = 1
-
-    # triprotic
     if case == "3":
         kA1 = input("Enter ka1 value :")
         kA2 = input("Enter ka2 vaule :")
         kA3 = input("Enter ka3 vaule :")
         H3a = input("Enter [H3A] vaule :")
-        # Ph=input("Enter PH vaule :")
-
-        # pKA1=input("Enter pKa1 vaule :")
-        # pKA2=input("Enter pKa2 vaule :")
-        # pKA3=input("Enter pKa3 vaule :")
-        # HplusH2a=input("Enter H2A+ vaule :")
-
-        # converting to int
         ka1 = float(kA1)
         ka2 = float(kA2)
         ka3 = float(kA3)
         H3A = float(H3a)
-        # pH=float(Ph)
         pKa1 = 0
         pKa2 = 0
         pKa3 = 0
-        # HplusH2A=float(HplusH2a)
-
         A = ((ka1) * (H3A))
         B = 1
         C = 0
@@ -1040,8 +960,6 @@ if type == "1":
             pKa3F = 0
         else:
             pKa3F = (math.log10(ka3) * -1)
-
-        # part2
         I6 = ((I) * (ka2))
         I9 = I
         I10 = ((ka2) + (I9))
