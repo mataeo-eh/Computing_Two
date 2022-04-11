@@ -1,4 +1,4 @@
-from __future__ import division 
+from __future__ import division
 import math
 
 type = input("please tell me which type you want: dissociation (1), titration (2) : ")
@@ -15,7 +15,8 @@ if type == "2":
 
 
         ka1 = float(kA1)
-        
+
+
         OHNegative = input("enter OH- [OH] value : ")
         LOh = input("Enter L of OH-: ")
         LHA = input("Enter L of H3A: ")
@@ -55,6 +56,8 @@ if type == "2":
 
         # y-aa
         Y2 = ka1
+
+
 
         if Y2 == 0:
             AB2 = 0
@@ -230,8 +233,6 @@ if type == "2":
 
     else:
         none = 2
-
-
 
     # input
     if case1 == "diprotic":
@@ -848,8 +849,7 @@ if type == "dissociation":
 
     case = input("Please type one of the following: monoprotic, diprotic, triprotic :")
     # mono
-
-  if case == "monoprotic":
+    if case == "monoprotic":
         kA1 = input("Enter ka1 value :")
         H3a = input("Enter [HA] vaule :")
 
@@ -1107,4 +1107,14 @@ if type == "dissociation":
         print("pKa3 =", pKa3F)
         print("pKB1 =", pKB1)
         print("pKB2 =", pKB2)
-        print("pKB3 =", pKB3)   
+        print("pKB3 =", pKB3)
+    else:
+        if case == "diprotic":
+            non = 1
+        else:
+            if case == "monoprotic":
+                nothinghap = 0
+            else:
+                print("u dumm, you must enter monoprotic diprotic or triprotic dum-dum")
+
+else: print("remember to use lower case and to not misspell anything")
