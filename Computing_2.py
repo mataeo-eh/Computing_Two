@@ -848,4 +848,263 @@ if type == "dissociation":
 
     case = input("Please type one of the following: monoprotic, diprotic, triprotic :")
     # mono
-    
+
+  if case == "monoprotic":
+        kA1 = input("Enter ka1 value :")
+        H3a = input("Enter [HA] vaule :")
+
+        # converting to int
+        ka1 = float(kA1)
+        H3A = float(H3a)
+        # pH=float(Ph)
+        pKa1 = 0
+        # HplusH2A=float(HplusH2a)
+
+        A = ((ka1) * (H3A))
+        B = 1
+        C = 0
+        D = ((-1) * A)
+        E = ((ka1) * (ka1))
+        F = ((E) - (4 * (B) * D))
+        G = math.sqrt(F)
+        H = (-ka1) + G
+        I = (H) / (2 * (B))
+        Hpos = I
+        if I == 0:
+            pH = 0
+        else:
+            pH = (math.log10(I) * -1)
+        pOH = 14 - (pH)
+        if I > 0:
+            H2af = I
+        else:
+            H2af = 0
+        log1 = 10 ** ((pKa1) * -1)
+        if ka1 == 0:
+            pKa1F = 0
+        else:
+            pKa1F = (math.log10(ka1) * -1)
+        pKB1 = 14 - pKa1F
+        # part2
+        H3=(H3A)-(H2af)
+        print("[A-] =", H2af)
+        print("[HA] =)", H3)
+        print("pH   =", pH)
+        print("[H+]   =", Hpos)
+        print("pOH  =", pOH)
+        print("pKa1 =", pKa1F)
+        print("pKB1 =", pKB1)
+    else:
+        nothinghap = 2
+    # diprotic
+    if case == "diprotic":
+        kA1 = input("Enter ka1 value :")
+        kA2 = input("Enter ka2 vaule :")
+        H3a = input("Enter H3A vaule :")
+        # Ph=input("Enter PH vaule :")
+
+        # converting to int
+        ka1 = float(kA1)
+        ka2 = float(kA2)
+        H3A = float(H3a)
+        # pH=float(Ph)
+        pKa1 = 0
+        pKa2 = 0
+        # HplusH2A=float(HplusH2a)
+
+        A = ((ka1) * (H3A))
+        B = 1
+        C = 0
+        D = ((-1) * A)
+        E = ((ka1) * (ka1))
+        F = ((E) - (4 * (B) * D))
+        G = math.sqrt(F)
+        H = (-ka1) + G
+        I = (H) / (2 * (B))
+        Hpos = I
+        if I == 0:
+            pH = 0
+        else:
+            pH = (math.log10(I) * -1)
+        pOH = 14 - (pH)
+        if I > 0:
+            H2af = I
+        else:
+            H2af = 0
+        log1 = 10 ** ((pKa1) * -1)
+        log2 = 10 ** ((pKa2) * -1)
+        if ka1 == 0:
+            pKa1F = 0
+        else:
+            pKa1F = (math.log10(ka1) * -1)
+        if ka2 == 0:
+            pKa2F = 0
+        else:
+            pKa2F = (math.log10(ka2) * -1)
+
+        # part2
+        I6 = ((I) * (ka2))
+        I9 = I
+        I10 = ((ka2) + (I9))
+        I11 = -1 * I6
+
+        I13 = (I10 * I10)
+        I14 = I13 - (4 * B * I11)
+        I15 = math.sqrt(I14)
+        I12 = (-1 * I10) + I15
+        I16 = I12 / (2 * B)
+
+        if I16 == int:
+            I16 = 0
+        else:
+            I16 = I16
+        pKB1 = 14 - pKa1F
+        pKB2 = 14 - pKa2F
+        if pKa1F == 0:
+            pKB1 = 0
+        else:
+            pKB1 = pKB1
+        if pKa2F == 0:
+            pKB2 = 0
+        else:
+            pKB2 = pKB2
+        H3=(H3A)-(H2af) 
+        print("[H2A] =", H3)
+        print("[HA-] =", H2af)
+        print("[A-2] =", I16)
+        print("pH   =", pH)
+        print("[H+]   =", Hpos)
+        print("pOH  =", pOH)
+        print("pKa1 =", pKa1F)
+        print("pKa2 =", pKa2F)
+        print("pKB1 =", pKB1)
+        print("pKB2 =", pKB2)
+
+    else:
+        nothinghappens = 1
+
+    # triprotic
+    if case == "triprotic":
+        kA1 = input("Enter ka1 value :")
+        kA2 = input("Enter ka2 vaule :")
+        kA3 = input("Enter ka3 vaule :")
+        H3a = input("Enter H3A vaule :")
+        # Ph=input("Enter PH vaule :")
+
+        # pKA1=input("Enter pKa1 vaule :")
+        # pKA2=input("Enter pKa2 vaule :")
+        # pKA3=input("Enter pKa3 vaule :")
+        # HplusH2a=input("Enter H2A+ vaule :")
+
+        # converting to int
+        ka1 = float(kA1)
+        ka2 = float(kA2)
+        ka3 = float(kA3)
+        H3A = float(H3a)
+        # pH=float(Ph)
+        pKa1 = 0
+        pKa2 = 0
+        pKa3 = 0
+        # HplusH2A=float(HplusH2a)
+
+        A = ((ka1) * (H3A))
+        B = 1
+        C = 0
+        D = ((-1) * A)
+        E = ((ka1) * (ka1))
+        F = ((E) - (4 * (B) * D))
+        G = math.sqrt(F)
+        H = (-ka1) + G
+        I = (H) / (2 * (B))
+        Hpos = I
+        if I == 0:
+            pH = 0
+        else:
+            pH = (math.log10(I) * -1)
+        pOH = 14 - (pH)
+        if I > 0:
+            H2af = I
+        else:
+            H2af = 0
+        log1 = 10 ** ((pKa1) * -1)
+        log2 = 10 ** ((pKa2) * -1)
+        log3 = 10 ** ((pKa3) * -1)
+        if ka1 == 0:
+            pKa1F = 0
+        else:
+            pKa1F = (math.log10(ka1) * -1)
+        if ka2 == 0:
+            pKa2F = 0
+        else:
+            pKa2F = (math.log10(ka2) * -1)
+        if ka3 == 0:
+            pKa3F = 0
+        else:
+            pKa3F = (math.log10(ka3) * -1)
+
+        # part2
+        I6 = ((I) * (ka2))
+        I9 = I
+        I10 = ((ka2) + (I9))
+        I11 = -1 * I6
+
+        I13 = (I10 * I10)
+        I14 = I13 - (4 * B * I11)
+        I15 = math.sqrt(I14)
+        I12 = (-1 * I10) + I15
+        I16 = I12 / (2 * B)
+        if I16 == int:
+            I16 = 0
+        else:
+            I16 = I16
+        J2 = I16
+        J6 = J2 * ka3
+        J9 = Hpos
+        J10 = ka3 + J9
+        J11 = -1 * J6
+        J12 = J10 * J10
+        J13 = J12 - (4 * B * J11)
+        J14 = math.sqrt(J13)
+        J15 = (-1 * I10) + J14
+        J16 = J15 / (2 * B)
+        if J16 > 0:
+
+            J16 = J16
+            A3 = J16
+        else:
+            J16 = 0
+            A3 = 0
+        if ka3 == 0:
+            I16 = I16
+        else:
+            I16 = I16 - A3
+
+        pKB1 = 14 - pKa1F
+        pKB2 = 14 - pKa2F
+        pKB3 = 14 - pKa3F
+        if pKa1F == 0:
+            pKB1 = 0
+        else:
+            pKB1 = pKB1
+        if pKa2F == 0:
+            pKB2 = 0
+        else:
+            pKB2 = pKB2
+        if pKa3F == 0:
+            pKB3 = 0
+        else:
+            pKB3 = pKB3
+        H3=(H3A)-(H2af) 
+        print("[H3A] =", H3)
+        print("[H2A-] =", H2af)
+        print("[HA-2] =", I16)
+        print("[A-3]  =", A3)
+        print("pH   =", pH)
+        print("[H+]   =", Hpos)
+        print("pOH  =", pOH)
+        print("pKa1 =", pKa1F)
+        print("pKa2 =", pKa2F)
+        print("pKa3 =", pKa3F)
+        print("pKB1 =", pKB1)
+        print("pKB2 =", pKB2)
+        print("pKB3 =", pKB3)   
