@@ -18,9 +18,9 @@ if type == "2":
 
 
         OHNegative = input("enter OH- [OH] value : ")
-        LOh = input("Enter L of OH-: ")
-        LHA = input("Enter L of H3A: ")
-        HA = input("Enter [H3A] value: ")
+        LOh = input("Enter Liters of OH-: ")
+        LHA = input("Enter Liters of HA: ")
+        HA = input("Enter [HA] value: ")
 
 
         OHnegative = float(OHNegative)
@@ -232,7 +232,7 @@ if type == "2":
 
 
     else:
-        none = 2
+        print = "click me ------> https://www.youtube.com/watch?v=MUuNDb-nm5M"
 
     # input
     if case1 == "2":
@@ -244,9 +244,9 @@ if type == "2":
         ka2 = float(kA2)
 
         OHNegative = input("enter OH- [OH] value: ")
-        LOh = input("Enter L of OH-: ")
-        LH3A = input("Enter L of H3A: ")
-        H3a = input("Enter [H3A] value: ")
+        LOh = input("Enter Liters of OH-: ")
+        LH3A = input("Enter Liters of H3A: ")
+        H3a = input("Enter [H2A] value: ")
 
 
         OHnegative = float(OHNegative)
@@ -524,15 +524,14 @@ if type == "2":
 
 
         OHNegative = input("enter OH- [OH] value: ")
-        LOh = input("Enter L of OH- : ")
-        LH3A = input("Enter L of H3A: ")
+        LOh = input("Enter Liters of OH- : ")
+        LH3A = input("Enter Liters of H3A: ")
         H3a = input("Enter [H3A] value: ")
 
         OHnegative = float(OHNegative)
         LOH = float(LOh)
         LH3a = float(LH3A)
         H3A = float(H3a)
-
 
 
         # H3A
@@ -819,7 +818,7 @@ if type == "2":
 
             print("[H3A] = ", H3AF)
             print("[H2A]- = ", H2AF)
-            print("[A-2] = ", HAneg2F)
+            print("[HA-2] = ", HAneg2F)
             print("[A-3] = ", Aneg3F)
             print("pH = ", pH)
             print("HHE  = ", HHE)
@@ -837,17 +836,17 @@ if type == "2":
             if case1 == "monoprotic":
                 nothinghappens = 0
             else:
-                print("please try to use your brain for once")
+                print("click me ------> https://www.youtube.com/watch?v=MUuNDb-nm5M")
 else:
     none=3
-if type == "dissociation":
+if type == "1":
 
     # input
-    monoprotic = "monoprotic =1"
-    diprotic = "diprotic =2"
-    triprotic = "triprotic =3"
+    monoprotic = "1"
+    diprotic = "2"
+    triprotic = "3"
 
-    case = input("Please type one of the following: monoprotic, diprotic, triprotic :")
+    case = input("Please type one of the following: monoprotic =1, diprotic =2, triprotic =3:")
     # mono
     if case == "1":
         kA1 = input("Enter ka1 value :")
@@ -900,7 +899,7 @@ if type == "dissociation":
     if case == "2":
         kA1 = input("Enter ka1 value :")
         kA2 = input("Enter ka2 vaule :")
-        H3a = input("Enter H3A vaule :")
+        H3a = input("Enter [H2A] vaule :")
         # Ph=input("Enter PH vaule :")
 
         # converting to int
@@ -988,7 +987,7 @@ if type == "dissociation":
         kA1 = input("Enter ka1 value :")
         kA2 = input("Enter ka2 vaule :")
         kA3 = input("Enter ka3 vaule :")
-        H3a = input("Enter H3A vaule :")
+        H3a = input("Enter [H3A] vaule :")
         # Ph=input("Enter PH vaule :")
 
         # pKA1=input("Enter pKa1 vaule :")
@@ -1116,6 +1115,8 @@ if type == "dissociation":
                 nothinghap = 0
             else:
                 print("u dumm, you must enter monoprotic diprotic or triprotic dum-dum")
+                print("click me ------> https://www.youtube.com/watch?v=MUuNDb-nm5M")
+            
+        
 
-else: print("remember to use lower case and to not misspell anything")
-Test
+else: print("remember to type the correct number")
