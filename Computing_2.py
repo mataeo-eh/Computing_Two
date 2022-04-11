@@ -59,3 +59,32 @@
         else:
             AB7 = 0.000000000000001 / Y2
             
+
+
+        # af block
+        AF2 = AJ4
+        AF3 = AE16
+
+        AF9 = AE16
+
+
+
+
+        # AG
+
+        # AG7=X10*AH2
+        AG9 = AE16
+
+        # X block
+        X9 = AE16 + 0.0000001 + 0
+        X14 = X9
+
+        if X9 <= 0:
+            X3 = 0
+        else:
+            X3 = (math.log10(X9) * -1)
+        pH = X3
+        # if X10 <= 0:
+        #   X4 = 0
+        # else:
+        #    X4 = (math.log10(X10) * -1)
