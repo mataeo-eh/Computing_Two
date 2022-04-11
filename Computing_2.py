@@ -839,3 +839,13 @@ if type == "2":
                 print("please try to use your brain for once")
 else:
     none=3
+if type == "dissociation":
+
+    # input
+    diprotic = "diprotic"
+    monoprotic = "monoprotic"
+    triprotic = "triprotic"
+
+    case = input("Please type one of the following: monoprotic, diprotic, triprotic :")
+    # mono
+    
