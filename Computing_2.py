@@ -27,7 +27,7 @@ if type == "2":
         LHA = input("Enter Liters of HA: ")
         HA = input("Enter [HA] value: ")
 
-#floating any fractions that may be used for concentration of volume (also useful if you have volume and moles but no calculator. you can find the concentration by simply telling the claculatro that the concentration is moles/liters)
+#floating any fractions that may be used for concentration of volume (also useful if you have volume and moles but no calculator. you can find the concentration by simply telling the calculator that the concentration is moles/liters)
         OHnegative = float(OHNegative)
         LOH = float(LOh)
         LHA = float(LHA)
