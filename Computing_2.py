@@ -8,9 +8,9 @@ if type == "2":
     monoprotic = "monoprotic"
     diprotic = "diprotic"
     triprotic = "triportic"
-    case1 = input("Please type one of the following: monoprotic, diprotic, triprotic :")
+    case1 = input("Please type one of the following: monoprotic =1, diprotic =2, triprotic =3 :")
 
-    if case1 == "monoprotic":
+    if case1 == "1":
         kA1 = input("enter ka1 value: ")
 
 
@@ -235,7 +235,7 @@ if type == "2":
         none = 2
 
     # input
-    if case1 == "diprotic":
+    if case1 == "2":
         kA1 = input("enter ka1 value: ")
         kA2 = input("enter ka2 value: ")
 
@@ -512,7 +512,7 @@ if type == "2":
     else:
         none = 1
     #triprotic
-    if case1 == "triprotic":
+    if case1 == "3":
     # input
         kA1 = input("enter ka1 value: ")
         kA2 = input("enter ka2 value: ")
@@ -843,13 +843,13 @@ else:
 if type == "dissociation":
 
     # input
-    diprotic = "diprotic"
-    monoprotic = "monoprotic"
-    triprotic = "triprotic"
+    monoprotic = "monoprotic =1"
+    diprotic = "diprotic =2"
+    triprotic = "triprotic =3"
 
     case = input("Please type one of the following: monoprotic, diprotic, triprotic :")
     # mono
-    if case == "monoprotic":
+    if case == "1":
         kA1 = input("Enter ka1 value :")
         H3a = input("Enter [HA] vaule :")
 
@@ -897,7 +897,7 @@ if type == "dissociation":
     else:
         nothinghap = 2
     # diprotic
-    if case == "diprotic":
+    if case == "2":
         kA1 = input("Enter ka1 value :")
         kA2 = input("Enter ka2 vaule :")
         H3a = input("Enter H3A vaule :")
@@ -984,7 +984,7 @@ if type == "dissociation":
         nothinghappens = 1
 
     # triprotic
-    if case == "triprotic":
+    if case == "3":
         kA1 = input("Enter ka1 value :")
         kA2 = input("Enter ka2 vaule :")
         kA3 = input("Enter ka3 vaule :")
