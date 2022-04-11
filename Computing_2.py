@@ -1,13 +1,13 @@
 from __future__ import division
 import math
 
-type = input("please tell me which type you want: dissociation (1), titration (2) : ")
+type = input("please tell me which type you want: dissociation =1, titration =2 : ")
 
 if type == "2":
     #input
-    monoprotic = "monoprotic"
-    diprotic = "diprotic"
-    triprotic = "triportic"
+    monoprotic = "1"
+    diprotic = "2"
+    triprotic = "3"
     case1 = input("Please type one of the following: monoprotic =1, diprotic =2, triprotic =3 :")
 
     if case1 == "1":
