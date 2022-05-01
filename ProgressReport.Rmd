@@ -1,0 +1,15 @@
+---
+title: "Titration Project"
+author: "Noah Eskew and Mataeo Anderson"
+date: "April 3, 2022"
+output: html_document
+---
+
+
+## Background
+
+The goal of the project is to create a document that can be used to run titrations as well as dissociations using standard values seen in a titration or dissociation problem such as Ka, acid concentration and base concentration. For the division of labor in the project, Noah focused on working through the math that is involved with the titration, and Mataeo took the math and worked through the logic in order to get the math working properly. The code is done for titrations, but we are still running some examples through the code to test for accuracy. 
+
+## How to Use
+
+The commands used in the terminal were designed to be simple to use so that error could be avoided. The terminal will prompt the user to select either dissociation by typing the number 1, or titration by typing the number 2. From their the type of titraton or dissociation is selected by typing 1, 2, or 3 for monoprotic, diprotic, and tripotic respectively. After this the values for ka, concentration of base, liters of base, liters of acid, and concentration of acid are input into the terminal. Once these values are entered, the code will run and values for pKa, pH and others will be given in the output. The same steps are followed for diprotic and triprotic with the only difference being inputs for additional Ka vales. 
